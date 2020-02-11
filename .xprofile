@@ -5,3 +5,6 @@ export XMODIFIERS=@im='ibus'
 
 # Toolbar for anthy
 ibus-daemon -drx
+
+# Shell commands in rofi
+export PATH=~/bin:"$PATH"
