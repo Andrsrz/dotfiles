@@ -1,71 +1,53 @@
-;; load theme
-;; make {copy, cut, paste, undo} have {C-c, C-x, C-v, C-z} keys
-(cua-mode 1)
-;; make emacs use standar keys
-;; Find. was forward-char
-(global-set-key (kbd "C-f") 'isearch-forward)
-;; New. was next-line
-(global-set-key (kbd "C-n") 'xah-new-empty-file)
-;; New Window. was nil
-(global-set-key (kbd "C-S-n") 'make-frame-command)
-;; Open. was open-line
-(global-set-key (kbd "C-o") 'ido-find-file)
-;; Save. was isearch-forward
-(global-set-key (kbd "C-s") 'save-buffer)
-;; Save As. was nil
-(global-set-key (kbd "C-S-s") 'write-file)
-;; Close. was kill-region
-(global-set-key (kbd "C-w") 'kill-buffer)
+;;; init.el -*- lexical-binding: t; -*-
+;;
+;; Author:  Henrik Lissner <henrik@lissner.net>
+;; URL:     https://github.com/hlissner/doom-emacs
+;;
+;;   =================     ===============     ===============   ========  ========
+;;   \\ . . . . . . .\\   //. . . . . . .\\   //. . . . . . .\\  \\. . .\\// . . //
+;;   ||. . ._____. . .|| ||. . ._____. . .|| ||. . ._____. . .|| || . . .\/ . . .||
+;;   || . .||   ||. . || || . .||   ||. . || || . .||   ||. . || ||. . . . . . . ||
+;;   ||. . ||   || . .|| ||. . ||   || . .|| ||. . ||   || . .|| || . | . . . . .||
+;;   || . .||   ||. _-|| ||-_ .||   ||. . || || . .||   ||. _-|| ||-_.|\ . . . . ||
+;;   ||. . ||   ||-'  || ||  `-||   || . .|| ||. . ||   ||-'  || ||  `|\_ . .|. .||
+;;   || . _||   ||    || ||    ||   ||_ . || || . _||   ||    || ||   |\ `-_/| . ||
+;;   ||_-' ||  .|/    || ||    \|.  || `-_|| ||_-' ||  .|/    || ||   | \  / |-_.||
+;;   ||    ||_-'      || ||      `-_||    || ||    ||_-'      || ||   | \  / |  `||
+;;   ||    `'         || ||         `'    || ||    `'         || ||   | \  / |   ||
+;;   ||            .===' `===.         .==='.`===.         .===' /==. |  \/  |   ||
+;;   ||         .=='   \_|-_ `===. .==='   _|_   `===. .===' _-|/   `==  \/  |   ||
+;;   ||      .=='    _-'    `-_  `='    _-'   `-_    `='  _-'   `-_  /|  \/  |   ||
+;;   ||   .=='    _-'          '-__\._-'         '-_./__-'         `' |. /|  |   ||
+;;   ||.=='    _-'                                                     `' |  /==.||
+;;   =='    _-'                                                            \/   `==
+;;   \   _-'                                                                `-_   /
+;;    `''                                                                      ``'
+;;
+;; These demons are not part of GNU Emacs.
+;;
+;;; License: MIT
 
-;; auto insert closing bracket
-(electric-pair-mode 1)
-;; turn on highlighting current line
-(global-hl-line-mode 1)
-;; turn on bracket match highlight
-(show-paren-mode 1)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector
-   [default default default italic underline success warning error])
- '(ansi-color-names-vector
-   ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
- '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (dracula)))
- '(display-line-numbers-type (quote relative))
- '(global-auto-revert-mode t)
- '(global-display-line-numbers-mode t)
- '(scroll-bar-mode nil)
- '(show-paren-mode t)
- '(tool-bar-mode nil)
- '(tooltip-mode nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "Source Code Pro" :foundry "ADBO" :slant normal :weight normal :height 117 :width normal)))))
+;; A big contributor to startup times is garbage collection. We up the gc
+;; threshold to temporarily prevent it from running, then reset it later by
+;; enabling `gcmh-mode'. Not resetting it will cause stuttering/freezes.
+(setq gc-cons-threshold most-positive-fixnum)
 
-;; Disable menu-bar
-(menu-bar-mode 0)
+;; In noninteractive sessions, prioritize non-byte-compiled source files to
+;; prevent the use of stale byte-code. Otherwise, it saves us a little IO time
+;; to skip the mtime checks on every *.elc file.
+(setq load-prefer-newer noninteractive)
 
-;; Custom initial buffer
-(setq initial-buffer-choice "~/Documents/projects")
+(let (file-name-handler-alist)
+  ;; Ensure Doom is running out of this file's directory
+  (setq user-emacs-directory (file-name-directory load-file-name)))
 
-;; Indentation to always use tab
-(defun my-insert-tab-char ()
-	"Insert a tar char. (ASCII 9, \t)"
-	(interactive)
-	(insert "\t"))
+;; Load the heart of Doom Emacs
+(load (concat user-emacs-directory "core/core")
+      nil 'nomessage)
 
-(global-set-key (kbd "TAB") 'my-insert-tab-char) ; same as Ctrl+i
-;; Tab width
-(setq tab-width 4)
-;; Disable auto indentation
-(when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
-
-;; Install themes
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'dracula t)
+;; And let 'er rip!
+(doom-initialize)
+(if noninteractive
+    (doom-initialize-packages)
+  (doom-initialize-core)
+  (doom-initialize-modules))
