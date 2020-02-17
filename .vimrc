@@ -36,3 +36,6 @@ end
 " persist the undo tree for each file
 set undofile
 set undodir^=~/.vim/undo//
+
+" Fixes mouse issue using Alacritty terminal
+set ttymouse=sgr
