@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# change-background - Change desktop background randomly in i3
+
+# Wallpapers directory
+user=$(whoami)
+dir="/home/$user/Pictures/Wallpapers"
+
+# Wallpaper file
+background=$(ls $dir/* | shuf -n1)
+
+# Set the wallpaper
+DISPLAY=:1 feh --bg-fill $background
