@@ -258,3 +258,4 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 yelp
+youtube-dl
