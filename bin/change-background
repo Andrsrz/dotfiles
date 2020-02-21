@@ -10,4 +10,4 @@ dir="/home/$user/Pictures/Wallpapers"
 background=$(ls $dir/* | shuf -n1)
 
 # Set the wallpaper
-DISPLAY=:1 feh --bg-fill $background
+DISPLAY=$DISPLAY feh --bg-fill $background
