@@ -20,6 +20,7 @@ cryptsetup
 cups
 device-mapper
 dhcpcd
+dictd
 diffutils
 discord
 dmenu
@@ -136,6 +137,7 @@ make
 man-db
 man-pages
 mdadm
+mlocate
 mousetweaks
 mutter
 nano
@@ -204,6 +206,8 @@ vlc
 wget
 which
 wine-staging
+wxgtk2
+wxgtk3
 xclip
 xdg-user-dirs-gtk
 xf86-video-vesa
