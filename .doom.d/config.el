@@ -48,3 +48,21 @@
 ;;
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
+
+;; wxWidgets
+(require 'cc-mode)
+
+(add-to-list  'c++-font-lock-extra-types
+  "\\bwx[A-Z][a-z][a-zA-Z]*?\\b")
+
+(defun c-wx-lineup-topmost-intro-cont (langelem)
+  (save-excursion
+    (beginning-of-line)
+    (if (re-search-forward "EVT_" (line-end-position) t)
+	'c-basic-offset
+      (c-lineup-topmost-intro-cont langelem))))
+
+
+(setq c++-mode-hook
+	 (lambda ()
+	   (c-set-offset 'topmost-intro-cont 'c-wx-lineup-topmost-intro-cont)))
