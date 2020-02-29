@@ -240,6 +240,9 @@ bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 30 -bc "$bg-color" -bg 
 
 # Wallpaper
 exec_always ~/bin/change-background
+# Lockscreen
+set $i3lockwall sh ~/.config/i3/scripts/lock.sh
+bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
