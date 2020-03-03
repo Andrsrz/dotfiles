@@ -1,10 +1,5 @@
 #!/bin/bash
 
-## Author : Aditya Shakya (adi1090x)
-## Mail : adi1090x@gmail.com
-## Github : @adi1090x
-## Reddit : @adi1090x
-
 rofi_command="rofi -theme themes/menu/quicklinks.rasi"
 
 # Links
