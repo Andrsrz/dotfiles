@@ -238,6 +238,13 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 # start rofi (a program launcher)
 bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 30 -bc "$bg-color" -bg "$inactive-bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "$inactive-bg-color"
 
+# AppMenu
+set $menuapp sh ~/.config/rofi/scripts/menu_apps.sh
+bindsym $mod+Shift+a exec --no-startup-id $menuapp
+# Quicklinks
+set $quicklinks sh ~/.config/rofi/scripts/menu_quicklinks.sh
+bindsym $mod+Shift+z exec --no-startup-id $quicklinks
+
 # Wallpaper
 exec_always ~/bin/change-background
 # Lockscreen
