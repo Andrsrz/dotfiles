@@ -244,6 +244,9 @@ bindsym $mod+Shift+a exec --no-startup-id $menuapp
 # Quicklinks
 set $quicklinks sh ~/.config/rofi/scripts/menu_quicklinks.sh
 bindsym $mod+Shift+z exec --no-startup-id $quicklinks
+# Screenshot
+set $screenshot sh ~/.config/rofi/scripts/menu_screenshot.sh
+bindsym $mod+Shift+s exec --no-startup-id $screenshot
 
 # Wallpaper
 exec_always ~/bin/change-background
@@ -258,7 +261,6 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Start applications on startup
 exec evince
-exec flameshot
 
 # Floating video
 bindsym $mod+Shift+F floating enable; resize set 590 px 333 px; sticky enable; move window to position 1325 px 723 px
