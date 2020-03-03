@@ -247,6 +247,12 @@ bindsym $mod+Shift+z exec --no-startup-id $quicklinks
 # Screenshot
 set $screenshot sh ~/.config/rofi/scripts/menu_screenshot.sh
 bindsym $mod+Shift+s exec --no-startup-id $screenshot
+# Powermenu
+set $powermenu sh ~/.config/rofi/scripts/menu_powermenu.sh
+bindsym $mod+Shift+p exec --no-startup-id $powermenu
+# Bluetooth
+set $bt sh ~/.config/rofi/scripts/menu_bluetooth.sh
+bindsym $mod+Shift+b exec --no-startup-id $bt
 
 # Wallpaper
 exec_always ~/bin/change-background
