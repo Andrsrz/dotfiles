@@ -4,42 +4,38 @@ rofi_command="rofi -theme themes/menu/apps.rasi"
 
 # Links
 browser=""
-terminal=""
-codeEditor=""
-gameEngine=""
+codeEditor=""
 IDEAndroid=""
-IDEWeb=""
-books=""
+gameEngine="ﮧ"
+books=""
 music=""
 video="嗢"
+videoEditor="壘"
+pixelArt=""
 modeling=""
-musicEditor=""
+musicEditor=""
 chatDiscord="ﭮ"
 steam=""
+lutris="者"
+minecraftLauncher=""
 chiaki="邏"
 
 # Variable passed to rofi
-options="$browser\n$terminal\n$codeEditor\n$gameEngine\n$IDEAndroid\n$IDEWeb\n$books\n$music\n$video\n$modeling\n$musicEditor\n$chatDiscord\n$steam\n$chiaki"
+options="$browser\n$codeEditor\n$IDEAndroid\n$gameEngine\n$books\n$music\n$video\n$videoEditor\n$pixelArt\n$modeling\n$musicEditor\n$chatDiscord\n$steam\n$lutris\n$minecraftLauncher\n$chiaki"
 
 chosen="$(echo -e "$options" | $rofi_command -p "Favorites" -dmenu -selected-row 0)"
 case $chosen in
     $browser)
         firefox &
         ;;
-    $terminal)
-        alacritty &
-        ;;
     $codeEditor)
         emacs &
         ;;
-	$gameEngine)
-		godot &
-		;;
 	$IDEAndroid)
 		jetbrains-studio &
 		;;
-	$IDEWeb)
-		code-os &
+	$gameEngine)
+		godot &
 		;;
 	$books)
 		evince &
@@ -49,6 +45,12 @@ case $chosen in
         ;;
 	$video)
 		vlc &
+		;;
+	$videoEditor)
+		obs &
+		;;
+	$pixelArt)
+		aseprite &
 		;;
 	$modeling)
 		blender &
@@ -61,6 +63,12 @@ case $chosen in
 		;;
 	$steam)
 		steam-native &
+		;;
+	$lutris)
+		lutris &
+		;;
+	$minecraftLauncher)
+		minecraft-launcher &
 		;;
 	$chiaki)
 		chiaki &
