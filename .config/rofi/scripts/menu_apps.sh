@@ -25,12 +25,12 @@ options="$browser\n$codeEditor\n$IDEAndroid\n$gameEngine\n$books\n$music\n$video
 
 chosen="$(echo -e "$options" | $rofi_command -p "Favorites" -dmenu -selected-row 0)"
 case $chosen in
-    $browser)
-        firefox &
-        ;;
-    $codeEditor)
-        emacs &
-        ;;
+	$browser)
+		firefox &
+		;;
+	$codeEditor)
+		emacs &
+		;;
 	$IDEAndroid)
 		jetbrains-studio &
 		;;
@@ -40,9 +40,9 @@ case $chosen in
 	$books)
 		evince &
 		;;
-    $music)
-        spotify &
-        ;;
+	$music)
+		spotify &
+		;;
 	$video)
 		vlc &
 		;;
