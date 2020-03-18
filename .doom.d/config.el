@@ -49,6 +49,13 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 
+;; Multiple-cursor
+(require 'multiple-cursors)
+
+;; Magit
+(setq magit-view-git-manual-method 'man)
+(global-set-key (kbd "C-x g") 'magit-status)
+
 ;; wxWidgets
 (require 'cc-mode)
 

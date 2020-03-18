@@ -23,12 +23,11 @@
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;(package! some-package)
 (require 'package)
-
 ;; If you want to use latest version
-;; (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+;; (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 ;;
 ;; If you want to use last tagged version
-(add-to-list 'package-archives '("melpa-stable" . "https://melpa-stable.org/packages/"))
+(add-to-list 'package-archives '("melpa-stable" . "https://melpa-stable.org/packages/") t)
 (package-initialize)
 
 ;; To install a package directly from a particular repo, you'll need to specify
