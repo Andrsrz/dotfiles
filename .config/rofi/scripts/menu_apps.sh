@@ -32,7 +32,7 @@ case $chosen in
 		emacs &
 		;;
 	$IDEAndroid)
-		jetbrains-studio &
+		android-studio &
 		;;
 	$gameEngine)
 		godot &
