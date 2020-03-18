@@ -269,10 +269,10 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Start applications on startup
-exec evince
+# exec evince
 
 # Floating video
-bindsym $mod+Shift+F floating enable; resize set 590 px 333 px; sticky enable; move window to position 1325 px 723 px
+bindsym $mod+Shift+F floating enable; resize set 590 px 333 px; sticky enable; move window to position 1325 px 740 px
 
 # No title bar
 new_window 1pixel
