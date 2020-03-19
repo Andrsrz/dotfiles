@@ -3,6 +3,12 @@
 rofi_command="rofi -theme themes/menu/Lbluetooth.rasi"
 bt_status=$(systemctl status bluetooth | grep "Active" | cut -d ":" -f2 | cut -d ")" -f1)
 
+if [ "$bt_status" = " active (running" ]; then
+    bt_status="On"
+elif [ "$bt_status" = " inactive (dead" ]; then
+    bt_status="Off"
+fi
+
 # Options
 turnon=""
 turnoff=""
