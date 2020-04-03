@@ -51,25 +51,15 @@
 
 ;; Multiple-cursor
 (require 'multiple-cursors)
+;; When you have an active region that spans multiple lines, the following will
+;; add a cursor to each line:
+(global-set-key (kbd "C-S-c RET") 'mc/edit-lines)
+;; When you want to add multiple cursors not based on continuous lines, but based on
+;; keywords in the buffer, use:
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 ;; Magit
 (setq magit-view-git-manual-method 'man)
 (global-set-key (kbd "C-x g") 'magit-status)
-
-;; wxWidgets
-(require 'cc-mode)
-
-(add-to-list  'c++-font-lock-extra-types
-  "\\bwx[A-Z][a-z][a-zA-Z]*?\\b")
-
-(defun c-wx-lineup-topmost-intro-cont (langelem)
-  (save-excursion
-    (beginning-of-line)
-    (if (re-search-forward "EVT_" (line-end-position) t)
-	'c-basic-offset
-      (c-lineup-topmost-intro-cont langelem))))
-
-
-(setq c++-mode-hook
-	 (lambda ()
-	   (c-set-offset 'topmost-intro-cont 'c-wx-lineup-topmost-intro-cont)))
