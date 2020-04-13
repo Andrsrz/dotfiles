@@ -6,6 +6,8 @@ alias ll='ls -l --color=auto'
 # Display all
 alias la='ls -la --color=auto'
 # cd to Projects.
-alias P='cd /home/andrsrzdc/Documents/projects'
+alias P='cd /home/$USER/Documents/projects'
+# cd to Library
+alias L='cd /home/$USER/Documents/library'
 # Alias to manage dotfiles
-alias config='/usr/bin/git --git-dir=/home/andrsrzdc/.dotfiles/ --work-tree=/home/andrsrzdc'
+alias config='/usr/bin/git --git-dir=/home/$USER/.dotfiles/ --work-tree=/home/$USER'
