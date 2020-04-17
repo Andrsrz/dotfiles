@@ -21,7 +21,7 @@
 /* ########### */
 
 #window {
-  width: 39.8%;
+  width: 32.35%;
   height: 24%;
   anchor: center;
   location: center;
@@ -78,7 +78,7 @@ textbox-prompt-colon {
 }
 #textbox-prompt-colon {
   expand: false;
-  str: "Apps";
+  str: "Games";
   background-color: @accent;
   text-color: @background;
 }
@@ -116,4 +116,3 @@ element.selected.active {
 element.selected.active {
   border-color: @accent;
 }
-
