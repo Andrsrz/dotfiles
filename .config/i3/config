@@ -152,6 +152,7 @@ assign [class="Godot"] $ws3
 assign [class="jetbrains-studio"] $ws3
 assign [class="code-oss"] $ws3
 assign [class="Evince"] $ws4
+assign [class="Zathura"] $ws4
 for_window [class="Spotify"] move to workspace $ws5
 assign [class="vlc"] $ws5
 assign [class="Glade"] $ws6
@@ -258,6 +259,9 @@ bindsym $mod+Shift+p exec --no-startup-id $powermenu
 # Bluetooth
 set $bt sh ~/.config/rofi/scripts/menu_bluetooth.sh
 bindsym $mod+Shift+b exec --no-startup-id $bt
+# Games
+set $games sh ~/.config/rofi/scripts/menu_games.sh
+bindsym $mod+Shift+g exec --no-startup-id $games
 
 # Wallpaper
 exec_always ~/bin/change-background
@@ -269,9 +273,6 @@ bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-
-# Start applications on startup
-# exec evince
 
 # Floating video
 bindsym $mod+Shift+F floating enable; resize set 590 px 333 px; sticky enable; move window to position 1325 px 740 px
