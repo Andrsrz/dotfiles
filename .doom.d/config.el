@@ -93,8 +93,9 @@
 (add-hook 'emacs-lisp-mode-hook 'disable-tabs)
 
 ;; Language-Specific Tweaks
-(setq-default python-indent-offset custom-tab-width) ;; Python
-(setq-default js-indent-level custom-tab-width)      ;; Javascript
+(setq-default css-indent-offset custom-tab-width)     ;; CSS
+(setq-default python-indent-offset custom-tab-width)  ;; Python
+(setq-default js-indent-level custom-tab-width)       ;; Javascript
 
 ;; Making electric-indent behave sanely
 (setq-default electric-indent-inhibit t)
