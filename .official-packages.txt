@@ -2,8 +2,10 @@ adobe-source-han-sans-jp-fonts
 alacritty
 android-tools
 anki
+arch-wiki-docs
 autoconf
 automake
+awesome
 baobab
 bash
 binutils
@@ -11,6 +13,7 @@ bison
 blender
 bluez-utils
 bzip2
+catch2
 cheese
 code
 conky
@@ -27,6 +30,7 @@ dmenu
 docker
 doxygen
 e2fsprogs
+ebtables
 efibootmgr
 emacs
 eog
@@ -45,10 +49,12 @@ flex
 gawk
 gcc
 gcc-libs
+gdb
 gdm
 gettext
 gimp
 git
+glade
 glibc
 gnome-backgrounds
 gnome-calculator
@@ -88,6 +94,7 @@ grep
 grilo-plugins
 groff
 grub
+gtkmm3-docs
 gvfs
 gvfs-afc
 gvfs-goa
@@ -97,6 +104,7 @@ gvfs-mtp
 gvfs-nfs
 gvfs-smb
 gzip
+hyperfine
 i3-gaps
 i3blocks
 i3lock
@@ -132,6 +140,7 @@ logrotate
 lutris
 lvm2
 lxappearance
+lynx
 m4
 make
 man-db
@@ -139,6 +148,7 @@ man-pages
 mdadm
 mlocate
 mousetweaks
+mpv
 mutter
 nano
 nautilus
@@ -150,6 +160,7 @@ networkmanager
 nvidia
 obs-studio
 ocl-icd
+openshot
 orca
 otf-ipafont
 pacman
@@ -157,7 +168,10 @@ pacman-contrib
 patch
 pavucontrol
 pciutils
+pdftk
 perl
+php-apache
+phppgadmin
 pkgconf
 postgresql
 procps-ng
@@ -167,12 +181,15 @@ qemu
 qt5-doc
 qtcreator
 ranger
+raylib
+redshift
 reiserfsprogs
 rofi
 rtorrent
 rygel
 s-nail
 samba
+scrot
 sed
 shadow
 shotwell
@@ -180,6 +197,7 @@ simple-scan
 smartmontools
 steam
 steam-native-runtime
+streamlink
 sudo
 sushi
 sysfsutils
@@ -187,6 +205,7 @@ sysprof
 sysstat
 systemd
 systemd-sysvcompat
+tabbed
 tar
 texinfo
 thunderbird
@@ -202,12 +221,12 @@ util-linux
 vi
 vim
 vino
+virt-manager
 vlc
+weechat
 wget
 which
 wine-staging
-wxgtk2
-wxgtk3
 xclip
 xdg-user-dirs-gtk
 xf86-video-vesa
@@ -263,3 +282,6 @@ xorg-xwininfo
 xorg-xwud
 yelp
 youtube-dl
+zathura
+zathura-cb
+zathura-pdf-mupdf
