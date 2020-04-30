@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Get a list of installed packages in my system
+
+pacman -Qqen > ~/.official-packages.txt
+pacman -Qqem > ~/.aur-packages.txt
