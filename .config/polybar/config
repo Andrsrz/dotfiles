@@ -34,7 +34,7 @@ height = 30
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0
-fixed-center = true
+fixed-center = false
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -59,9 +59,9 @@ font-2 = siji:pixelsize=10;1
 font-3 = Font-Awesome:size=10;2
 font-4 = HurmitNerdFontMono:size=16;3
 
-modules-left = i3 wlan eth cpu memory filesystem
-modules-center = date
-modules-right = agenda bluetooth pulseaudio xkeyboard battery
+modules-left = i3
+modules-center = date agenda
+modules-right = pulseaudio bluetooth filesystem cpu memory wlan eth xkeyboard battery
 
 tray-position = right
 tray-padding = 2
@@ -107,6 +107,8 @@ interval = 25
 
 mount-0 = /
 mount-1 = /home
+mount-2 = /backup
+mount-3 = /games
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
