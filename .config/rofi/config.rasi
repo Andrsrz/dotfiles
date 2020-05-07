@@ -1,25 +1,25 @@
 configuration {
-	modi: "window,run,ssh";
-/*	width: 50;*/
-/*	lines: 15;*/
+	modi: "window#run#ssh";
+/*	width: 500;*/
+	lines: 5;
 	columns: 1;
 /*	font: "mono 12";*/
 /*	bw: 1;*/
 	location: 1;
-	padding: 0;
-	yoffset: 35;
+	padding: 5;
+	yoffset: 40;
 	xoffset: 5;
 /*	fixed-num-lines: true;*/
-	show-icons: true;
+ 	show-icons: false;
 /*	terminal: "rofi-sensible-terminal";*/
-/*	ssh-client: "ssh";*/
+	ssh-client: "ssh";
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
 /*	run-command: "{cmd}";*/
 /*	run-list-command: "";*/
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "wmctrl -i -R {window}";*/
 /*	window-match-fields: "all";*/
-	icon-theme: "Papirus";
+/*	icon-theme: "Papirus";*/
 /*	drun-match-fields: "name,generic,exec,categories";*/
 /*	drun-show-actions: false;*/
 /*	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";*/
@@ -34,7 +34,7 @@ configuration {
 /*	auto-select: false;*/
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
-	combi-modi: "window,run,ssh";
+	combi-modi: "window#run#ssh";
 /*	matching: "normal";*/
 /*	tokenize: true;*/
 /*	m: "-5";*/
@@ -47,20 +47,20 @@ configuration {
 /*	fake-transparency: false;*/
 /*	dpi: -1;*/
 /*	threads: 0;*/
-	scrollbar-width: 0;
+/*	scrollbar-width: 0;*/
 	scroll-method: 1;
 /*	fake-background: "screenshot";*/
 /*	window-format: "{w}    {c}   {t}";*/
 /*	click-to-exit: true;*/
 	show-match: true;
-	theme: "Arc-Dark";
+/*	theme: "Arc-Dark";*/
 /*	color-normal: ;*/
 /*	color-urgent: ;*/
 /*	color-active: ;*/
 /*	color-window: ;*/
 	max-history-size: 10;
 /*	combi-hide-mode-prefix: false;*/
-/*	matching-negate-char: '-' /* unsupported */;*/
+/*	matching-negate-char: '-';*/
 /*	cache-dir: ;*/
 /*	pid: "/run/user/1000/rofi.pid";*/
 /*	display-window: ;*/
@@ -165,6 +165,7 @@ configuration {
     border-radius: 6;
     border-color: @bordercolor;
     padding:          5;
+	width:	350;
 }
 #mainbox {
     border:  0;
