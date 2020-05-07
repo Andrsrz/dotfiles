@@ -39,3 +39,6 @@ set undodir^=~/.vim/undo//
 
 " Fixes mouse issue using Alacritty terminal
 set ttymouse=sgr
+
+" Enalbe syntax highlighting
+au BufNewFile,BufRead /*.rasi setf css
