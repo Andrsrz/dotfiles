@@ -1,0 +1,6 @@
+#!/bin/bash
+# alexelcapo - Watch my favorite streamer
+
+URL="https://www.twitch.tv/alexelcapo"
+
+streamlink $URL best --player mpv &
