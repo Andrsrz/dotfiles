@@ -83,6 +83,7 @@
 (add-hook 'c++-mode-hook 'enable-tabs)
 (add-hook 'python-mode-hook 'enable-tabs)
 (add-hook 'js-mode-hook 'enable-tabs)
+(add-hook 'ruby-mode-hook 'enable-tabs)
 (add-hook 'lua-mode-hook 'enable-tabs)
 (add-hook 'php-mode-hook 'enable-tabs)
 (add-hook 'html-mode-hook 'enable-tabs)
