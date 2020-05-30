@@ -11,3 +11,5 @@ alias P='cd /home/$USER/Documents/projects'
 alias L='cd /home/$USER/Documents/library'
 # Alias to manage dotfiles
 alias config='/usr/bin/git --git-dir=/home/$USER/.dotfiles/ --work-tree=/home/$USER'
+# Run Foundation with NodeJS10
+alias foundation='npx -p node@10 foundation'
