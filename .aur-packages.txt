@@ -15,10 +15,17 @@ nerd-fonts-complete
 playerctl-git
 polybar
 protontricks
+python-grip
 raylib-cpp-git
+rbenv
+ruby-build
 siji-git
 spotify
+spotify-tui
+spotifyd-full
+tabbed
 termsyn-font
+timeshift
 tint-tetris
 tmatrix-git
 tmux-bash-completion

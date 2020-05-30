@@ -104,6 +104,7 @@ gvfs-mtp
 gvfs-nfs
 gvfs-smb
 gzip
+hexchat
 hyperfine
 i3-gaps
 i3blocks
@@ -135,6 +136,7 @@ licenses
 linux
 linux-firmware
 linux-headers
+llvm
 lmms
 logrotate
 lutris
@@ -157,6 +159,7 @@ neofetch
 netctl
 nethack
 networkmanager
+npm
 nvidia
 obs-studio
 ocl-icd
@@ -186,6 +189,7 @@ redshift
 reiserfsprogs
 rofi
 rtorrent
+rust
 rygel
 s-nail
 samba
@@ -205,7 +209,6 @@ sysprof
 sysstat
 systemd
 systemd-sysvcompat
-tabbed
 tar
 texinfo
 thunderbird
@@ -280,6 +283,7 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+yarn
 yelp
 youtube-dl
 zathura
