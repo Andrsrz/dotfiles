@@ -105,6 +105,7 @@ gvfs-nfs
 gvfs-smb
 gzip
 hexchat
+htmldoc
 hyperfine
 i3-gaps
 i3blocks
