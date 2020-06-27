@@ -7,7 +7,7 @@
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
 (setq user-full-name "Andres Ruiz"
-      user-mail-address "andrsruiz@gmail.com")
+	user-mail-address "andrsruiz@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -49,8 +49,11 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 
-; START MULTIPLE-CURSOR CONFIG
+; START CONFIGS
 (require 'multiple-cursors)
+(require 'magit)
+(require 'vue-mode)
+(require 'neotree)
 ;; When you have an active region that spans multiple lines, the following will
 ;; add a cursor to each line:
 (global-set-key (kbd "C-S-c RET") 'mc/edit-lines)
@@ -73,9 +76,12 @@
 ;; Two callable functions for enabling/disabling tabs in Emacs
 (defun disable-tabs () (setq indent-tabs-mode nil))
 (defun enable-tabs  ()
-  (local-set-key (kbd "TAB") 'tab-to-tab-stop)
-  (setq indent-tabs-mode t)
-  (setq tab-width custom-tab-width))
+	(local-set-key (kbd "TAB") 'tab-to-tab-stop)
+	(setq indent-tabs-mode t)
+	(setq tab-width custom-tab-width))
+
+;; setup files ending in “.vue” to open in vue-mode
+(add-to-list 'auto-mode-alist '("\\.vue\'" . vue-mode))
 
 ;; Hooks to Enable Tabs
 (add-hook 'prog-mode-hook 'enable-tabs)
@@ -83,15 +89,17 @@
 (add-hook 'c++-mode-hook 'enable-tabs)
 (add-hook 'python-mode-hook 'enable-tabs)
 (add-hook 'js-mode-hook 'enable-tabs)
+(add-hook 'vue-mode 'enable-tabs)
 (add-hook 'ruby-mode-hook 'enable-tabs)
 (add-hook 'lua-mode-hook 'enable-tabs)
 (add-hook 'php-mode-hook 'enable-tabs)
 (add-hook 'html-mode-hook 'enable-tabs)
 (add-hook 'css-mode-hook 'enable-tabs)
 (add-hook 'org-mode-hook 'enable-tabs)
-;; Hooks to Disable Tabs
-(add-hook 'lisp-mode-hook 'disable-tabs)
-(add-hook 'emacs-lisp-mode-hook 'disable-tabs)
+(add-hook 'lisp-mode-hook 'enable-tabs)
+(add-hook 'emacs-lisp-mode-hook 'enable-tabs)
+;; Disable background
+(add-hook 'mmm-mode-hook (lambda() (set-face-background 'mmm-default-submode-face nil)))
 
 ;; Language-Specific Tweaks
 (setq-default css-indent-offset custom-tab-width)     ;; CSS
@@ -109,8 +117,8 @@
 ;; This will also show trailing characters as they are useful to spot.
 (setq whitespace-style '(face tabs tab-mark trailing))
 (custom-set-faces
- '(whitespace-tab ((t (:foreground "#636363")))))
+	'(whitespace-tab ((t (:foreground "#636363")))))
 (setq whitespace-display-mappings
-  '((tab-mark 9 [124 9] [92 9]))) ; 124 is the ascii ID for '\|'
+	'((tab-mark 9 [124 9] [92 9]))) ; 124 is the ascii ID for '\|'
 (global-whitespace-mode) ; Enable whitespace mode everywhere
 ; END TABS CONFIG

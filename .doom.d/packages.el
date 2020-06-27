@@ -22,6 +22,10 @@
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;(package! some-package)
+(package! vue-mode)
+(package! magit)
+(package! multiple-cursors)
+(package! neotree)
 (require 'package)
 ;; If you want to use latest version
 ;; (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
