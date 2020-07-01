@@ -6,6 +6,10 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/.bash_env_variables ]; then
+	. ~/.bash_env_variables
+fi
+
 # Set default editor to vim
 export EDITOR=vim
 
