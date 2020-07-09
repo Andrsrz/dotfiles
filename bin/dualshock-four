@@ -1,0 +1,3 @@
+#!/bin/bash
+# Connect to my PS4 Controller
+ds4drv --hidraw
