@@ -60,7 +60,7 @@ font-3 = Font-Awesome:size=10;2
 font-4 = HurmitNerdFontMono:size=16;3
 
 modules-left = i3
-modules-center = date agenda
+modules-center = date
 modules-right = pulseaudio bluetooth filesystem cpu memory wlan eth xkeyboard battery
 
 tray-position = right
