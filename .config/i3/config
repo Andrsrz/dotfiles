@@ -240,3 +240,6 @@ bindsym $mod+Shift+F floating enable; resize set 590 px 333 px; sticky enable; m
 
 # No title bar
 new_window 1pixel
+
+# Execute xbindkeys (backligh laptop)
+exec_always xbindkeys
