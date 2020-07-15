@@ -1,0 +1,6 @@
+# Increase backlight
+"brightnessctl s 10%+"
+   XF86MonBrightnessUp
+# Decrease backlight
+"brightnessctl s 10%-"
+   XF86MonBrightnessDown
