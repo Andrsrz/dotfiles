@@ -99,6 +99,7 @@
 (add-hook 'org-mode-hook 'enable-tabs)
 (add-hook 'lisp-mode-hook 'enable-tabs)
 (add-hook 'emacs-lisp-mode-hook 'enable-tabs)
+(add-hook 'gdscript-mode 'enable-tabs)
 ;; Disable background
 (add-hook 'mmm-mode-hook (lambda() (set-face-background 'mmm-default-submode-face nil)))
 
@@ -122,4 +123,9 @@
 (setq whitespace-display-mappings
 	'((tab-mark 9 [124 9] [92 9]))) ; 124 is the ascii ID for '\|'
 (global-whitespace-mode) ; Enable whitespace mode everywhere
+
+;; GDScript Config
+(setq gdscript-use-tab-indents t) ;; If true, use tabs for indents. Default: t
+(setq gdscript-indent-offset 4) ;; Controls the width of tab-based indents
+
 ; END TABS CONFIG
