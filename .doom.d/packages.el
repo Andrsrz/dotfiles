@@ -26,7 +26,9 @@
 (package! magit)
 (package! multiple-cursors)
 (package! neotree)
-(require 'package)
+(package! gdscript-mode
+	:recipe (:host github
+		:repo "GDQuest/emacs-gdscript-mode"))
 ;; If you want to use latest version
 ;; (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 ;;

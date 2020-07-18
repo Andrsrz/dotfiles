@@ -54,6 +54,7 @@
 (require 'magit)
 (require 'vue-mode)
 (require 'neotree)
+(require 'gdscript-mode)
 ;; When you have an active region that spans multiple lines, the following will
 ;; add a cursor to each line:
 (global-set-key (kbd "C-S-c RET") 'mc/edit-lines)
