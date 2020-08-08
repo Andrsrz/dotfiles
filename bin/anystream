@@ -1,0 +1,4 @@
+#!/bin/bash
+# anystream - Watch my any streamer
+
+streamlink $1 best --player mpv &
