@@ -9,10 +9,13 @@ godot
 i3-agenda-git
 itch-bin
 kpcli
+legendary
 libselinux
 megasync
 minecraft-launcher
 nerd-fonts-complete
+nvm
+piper-git
 playerctl-git
 polybar
 protontricks

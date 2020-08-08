@@ -18,6 +18,7 @@ cheese
 code
 conky
 coreutils
+cowsay
 cronie
 cryptsetup
 cups
@@ -160,7 +161,6 @@ neofetch
 netctl
 nethack
 networkmanager
-npm
 nvidia
 obs-studio
 ocl-icd
@@ -284,7 +284,6 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
-yarn
 yelp
 youtube-dl
 zathura
