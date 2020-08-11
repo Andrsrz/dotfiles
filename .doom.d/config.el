@@ -82,7 +82,21 @@
 	(setq tab-width custom-tab-width))
 
 ;; setup files ending in “.vue” to open in vue-mode
-(add-to-list 'auto-mode-alist '("\\.vue\'" . vue-mode))
+(define-derived-mode vue-mode web-mode "Vue mode")
+(add-to-list 'auto-mode-alist '("\\.vue\\'" . vue-mode))
+(after! flycheck
+  (flycheck-add-mode 'javascript-eslint 'vue-mode)
+  (flycheck-add-mode 'css-stylelint 'vue-mode)
+  (add-hook 'vue-mode-hook (lambda () (flycheck-add-next-checker 'lsp-ui 'javascript-eslint)))
+  (add-hook 'vue-mode-hook (lambda () (flycheck-add-next-checker 'javascript-eslint 'css-stylelint))))
+
+;; setup files ending in ".ts"
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+(defun gt/typescript-mode-setup ()
+  "Custom setup for Typescript mode"
+  (setq flycheck-checker 'javascript-eslint)
+  )
+(add-hook 'typescript-mode-hook 'gt/typescript-mode-setup)
 
 ;; Hooks to Enable Tabs
 (add-hook 'prog-mode-hook 'enable-tabs)
@@ -91,6 +105,7 @@
 (add-hook 'python-mode-hook 'enable-tabs)
 (add-hook 'js-mode-hook 'enable-tabs)
 (add-hook 'vue-mode 'enable-tabs)
+(add-hook 'typescript-mode 'enable-tabs)
 (add-hook 'ruby-mode-hook 'enable-tabs)
 (add-hook 'lua-mode-hook 'enable-tabs)
 (add-hook 'php-mode-hook 'enable-tabs)
