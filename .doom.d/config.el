@@ -53,6 +53,7 @@
 (require 'multiple-cursors)
 (require 'magit)
 (require 'vue-mode)
+(require 'nvm)
 (require 'neotree)
 (require 'gdscript-mode)
 ;; When you have an active region that spans multiple lines, the following will
@@ -73,6 +74,7 @@
 ; START TABS CONFIG
 ;; Create a variable for our preferred tab width
 (setq custom-tab-width 4)
+(setq custom-tab-width-for-web 2)
 
 ;; Two callable functions for enabling/disabling tabs in Emacs
 (defun disable-tabs () (setq indent-tabs-mode nil))
@@ -80,51 +82,43 @@
 	(local-set-key (kbd "TAB") 'tab-to-tab-stop)
 	(setq indent-tabs-mode t)
 	(setq tab-width custom-tab-width))
-
-;; setup files ending in “.vue” to open in vue-mode
-(define-derived-mode vue-mode web-mode "Vue mode")
-(add-to-list 'auto-mode-alist '("\\.vue\\'" . vue-mode))
-(after! flycheck
-  (flycheck-add-mode 'javascript-eslint 'vue-mode)
-  (flycheck-add-mode 'css-stylelint 'vue-mode)
-  (add-hook 'vue-mode-hook (lambda () (flycheck-add-next-checker 'lsp-ui 'javascript-eslint)))
-  (add-hook 'vue-mode-hook (lambda () (flycheck-add-next-checker 'javascript-eslint 'css-stylelint))))
-
-;; setup files ending in ".ts"
-(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
-(defun gt/typescript-mode-setup ()
-  "Custom setup for Typescript mode"
-  (setq flycheck-checker 'javascript-eslint)
-  )
-(add-hook 'typescript-mode-hook 'gt/typescript-mode-setup)
+(defun enable-tabs-for-web ()
+	(local-set-key (kbd "TAB") 'tab-to-tab-stop)
+	(setq indent-tabs-mode t)
+	(setq tab-width custom-tab-width-for-web))
 
 ;; Hooks to Enable Tabs
 (add-hook 'prog-mode-hook 'enable-tabs)
 (add-hook 'c-mode-hook 'enable-tabs)
 (add-hook 'c++-mode-hook 'enable-tabs)
 (add-hook 'python-mode-hook 'enable-tabs)
-(add-hook 'js-mode-hook 'enable-tabs)
-(add-hook 'vue-mode 'enable-tabs)
-(add-hook 'typescript-mode 'enable-tabs)
 (add-hook 'ruby-mode-hook 'enable-tabs)
 (add-hook 'lua-mode-hook 'enable-tabs)
 (add-hook 'php-mode-hook 'enable-tabs)
-(add-hook 'html-mode-hook 'enable-tabs)
-(add-hook 'css-mode-hook 'enable-tabs)
+(add-hook 'web-mode 'enable-tabs-for-web)
+(add-hook 'html-mode-hook 'enable-tabs-for-web)
+(add-hook 'css-mode-hook 'enable-tabs-for-web)
+(add-hook 'js2-mode-hook 'enable-tabs-for-web)
+(add-hook 'js-mode-hook 'enable-tabs-for-web)
+(add-hook 'vue-mode 'enable-tabs-for-web)
+(add-hook 'typescript-mode 'enable-tabs-for-web)
 (add-hook 'org-mode-hook 'enable-tabs)
 (add-hook 'lisp-mode-hook 'enable-tabs)
 (add-hook 'emacs-lisp-mode-hook 'enable-tabs)
 (add-hook 'gdscript-mode 'enable-tabs)
-;; Disable background
-(add-hook 'mmm-mode-hook (lambda() (set-face-background 'mmm-default-submode-face nil)))
 
 ;; Language-Specific Tweaks
-(setq-default css-indent-offset custom-tab-width)     ;; CSS
 (setq-default python-indent-offset custom-tab-width)  ;; Python
-(setq-default js-indent-level custom-tab-width)       ;; Javascript
+(setq-default web-mode-markup-indent-offset custom-tab-width-for-web)
+(setq-default web-mode-css-indent-offset custom-tab-width-for-web)
+(setq-default web-mode-script-padding custom-tab-width-for-web)
+(setq-default css-indent-offset custom-tab-width-for-web) ;; CSS
+(setq-default js2-indent-hook custom-tab-width-for-web) ;; JavaScript
 
 ;; Making electric-indent behave sanely
 (setq-default electric-indent-inhibit t)
+
+; END TABS CONFIG
 
 ;; Make the backspace properly erase the tab instead of
 ;; removing 1 space at a time.
@@ -134,13 +128,27 @@
 ;; This will also show trailing characters as they are useful to spot.
 (setq whitespace-style '(face tabs tab-mark trailing))
 (custom-set-faces
-	'(whitespace-tab ((t (:foreground "#636363")))))
+	'(whitespace-tab ((t (:foreground "#383A59")))))
 (setq whitespace-display-mappings
 	'((tab-mark 9 [124 9] [92 9]))) ; 124 is the ascii ID for '\|'
 (global-whitespace-mode) ; Enable whitespace mode everywhere
+
+;; Vue Config
+(add-to-list 'auto-mode-alist '("\\.vue\\'" . vue-mode))
+(add-hook 'vue-mode-hook 'lsp!)
+(add-hook 'vue-mode-hook
+	(lambda()
+		(set-face-background 'mmm-default-submode-face nil)))
+
+;; setup files ending in ".ts"
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
+(defun gt/typescript-mode-setup ()
+  "Custom setup for Typescript mode"
+  (setq flycheck-checker 'javascript-eslint)
+  )
+(add-hook 'typescript-mode-hook 'gt/typescript-mode-setup)
 
 ;; GDScript Config
 (setq gdscript-use-tab-indents t) ;; If true, use tabs for indents. Default: t
 (setq gdscript-indent-offset 4) ;; Controls the width of tab-based indents
 
-; END TABS CONFIG

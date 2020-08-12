@@ -22,10 +22,11 @@
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;(package! some-package)
-(package! vue-mode)
 (package! magit)
 (package! multiple-cursors)
 (package! neotree)
+(package! nvm)
+(package! vue-mode)
 (package! gdscript-mode
 	:recipe (:host github
 		:repo "GDQuest/emacs-gdscript-mode"))
