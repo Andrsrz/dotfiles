@@ -55,6 +55,7 @@
 (require 'vue-mode)
 (require 'nvm)
 (require 'neotree)
+(require 'restclient)
 (require 'gdscript-mode)
 ;; When you have an active region that spans multiple lines, the following will
 ;; add a cursor to each line:
@@ -98,8 +99,8 @@
 (add-hook 'web-mode 'enable-tabs-for-web)
 (add-hook 'html-mode-hook 'enable-tabs-for-web)
 (add-hook 'css-mode-hook 'enable-tabs-for-web)
-(add-hook 'js2-mode-hook 'enable-tabs-for-web)
-(add-hook 'js-mode-hook 'enable-tabs-for-web)
+(add-hook 'js2-mode-hook 'enable-tabs)
+(add-hook 'js-mode-hook 'enable-tabs)
 (add-hook 'vue-mode 'enable-tabs-for-web)
 (add-hook 'typescript-mode 'enable-tabs-for-web)
 (add-hook 'org-mode-hook 'enable-tabs)
@@ -117,6 +118,8 @@
 
 ;; Making electric-indent behave sanely
 (setq-default electric-indent-inhibit t)
+;; make return key also do indent, globally
+(electric-indent-mode 1)
 
 ; END TABS CONFIG
 

@@ -25,6 +25,7 @@
 (package! magit)
 (package! multiple-cursors)
 (package! neotree)
+(package! restclient)
 (package! nvm)
 (package! vue-mode)
 (package! gdscript-mode
