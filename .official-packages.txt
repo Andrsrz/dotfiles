@@ -15,6 +15,7 @@ bluez-utils
 bzip2
 catch2
 cheese
+chromium
 code
 conky
 coreutils
@@ -45,6 +46,7 @@ file-roller
 filesystem
 findutils
 firefox
+firefox-developer-edition
 flameshot
 flex
 gawk
@@ -121,6 +123,7 @@ iputils
 ipython
 jdk-openjdk
 jfsutils
+jpegoptim
 krita
 less
 lib32-gst-plugins-base-libs
@@ -162,6 +165,8 @@ netctl
 nethack
 networkmanager
 nvidia
+nvidia-dkms
+nvidia-settings
 obs-studio
 ocl-icd
 openshot
@@ -186,7 +191,6 @@ qt5-doc
 qtcreator
 ranger
 raylib
-redshift
 reiserfsprogs
 rofi
 rtorrent
@@ -284,6 +288,7 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+yarn
 yelp
 youtube-dl
 zathura

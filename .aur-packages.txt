@@ -3,14 +3,15 @@ anbox-image-gapps
 anbox-modules-dkms-git
 android-studio
 bashdb
+cpu-x
 ddd
 drawio-desktop
 godot
 i3-agenda-git
 itch-bin
-kpcli
 legendary
 libselinux
+lyrebird
 megasync
 minecraft-launcher
 nerd-fonts-complete
@@ -38,3 +39,5 @@ ttf-monapo
 viewnior-git
 xorg-server-xdmx
 yay
+zeal
+zoom
