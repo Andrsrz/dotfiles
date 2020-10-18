@@ -16,6 +16,7 @@ megasync
 minecraft-launcher
 nerd-fonts-complete
 nvm
+onefetch
 piper-git
 playerctl-git
 polybar
@@ -37,6 +38,7 @@ tmux-bash-completion
 tor-browser
 ttf-monapo
 viewnior-git
+xorg-luit
 xorg-server-xdmx
 yay
 zeal
