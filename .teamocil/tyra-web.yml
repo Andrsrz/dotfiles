@@ -25,7 +25,7 @@ windows:
         - commands:
           - sleep 3
           - ll
-          - npm run devStart
+          - npm run dev:start
   - name: front-end
     root: ~/Documents/projects/web/tyra-web/client
     panes:
