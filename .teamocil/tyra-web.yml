@@ -1,33 +1,37 @@
 windows:
-  - name: tyra-web
-    root: ~/Documents/projects/web/tyra-web
+  - name: tests
+    root: ~/Documents/projects/web
     layout: even-horizontal
     panes:
         - commands:
-          - cd client/
+          - cd tyra-web/
           - npm run test:unit
         - commands:
-          - cd server/
+          - cd tyra-web-api/
           - npm run test:unit
-  - name: readme-preview
+  - name: readme-preview-tw
     root: ~/Documents/projects/web/tyra-web
     panes:
-        - grip README.md
+        - grip README.md 9340
+  - name: readme-preview-twa
+    root: ~/Documents/projects/web/tyra-web-api
+    panes:
+        - grip README.md 5900
   - name: mongodb
-    root: ~/Documents/projects/web/tyra-web
+    root: ~/Documents/projects/web/tyra-web-api
     panes:
         - commands:
           - sudo docker start mongodb
           - sudo docker exec -it mongodb bash
-  - name: back-end
-    root: ~/Documents/projects/web/tyra-web/server
+  - name: api
+    root: ~/Documents/projects/web/tyra-web-api
     panes:
         - commands:
           - sleep 3
           - ll
           - npm run dev:start
-  - name: front-end
-    root: ~/Documents/projects/web/tyra-web/client
+  - name: app
+    root: ~/Documents/projects/web/tyra-web
     panes:
         - commands:
           - sleep 6
