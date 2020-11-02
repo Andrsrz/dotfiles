@@ -1,3 +1,4 @@
+name: tyra-web
 windows:
   - name: tests
     root: ~/Documents/projects/web
