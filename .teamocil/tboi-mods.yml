@@ -1,0 +1,17 @@
+name: tboi-mod
+windows:
+  - name: playground
+    root: ~/Documents/projects/lua/tboi-mods/playground
+    panes:
+        - commands:
+          - ll
+  - name: steam-folder
+    root: /games/Steam/steamapps/compatdata/250900/pfx/drive_c/users/steamuser/Documents
+    panes:
+        - commands:
+          - cd 'My Games/Binding of Isaac Afterbirth+ Mods'
+		  - ll
+  - name: readme-preview
+    root: ~/Documents/projects/lua/tboi-mods
+    panes:
+        - grip README.md 9340
