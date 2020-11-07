@@ -10,14 +10,6 @@ windows:
         - commands:
           - cd tyra-web-api/
           - npm run test:unit
-  - name: readme-preview-tw
-    root: ~/Documents/projects/web/tyra-web
-    panes:
-        - grip README.md 9340
-  - name: readme-preview-twa
-    root: ~/Documents/projects/web/tyra-web-api
-    panes:
-        - grip README.md 5900
   - name: mongodb
     root: ~/Documents/projects/web/tyra-web-api
     panes:
@@ -38,3 +30,11 @@ windows:
           - sleep 6
           - ll
           - npm run serve
+  - name: readme-preview-tw
+    root: ~/Documents/projects/web/tyra-web
+    panes:
+        - grip README.md 9340
+  - name: readme-preview-twa
+    root: ~/Documents/projects/web/tyra-web-api
+    panes:
+        - grip README.md 5900
