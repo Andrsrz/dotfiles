@@ -1,0 +1,7 @@
+name: ardc
+windows:
+  - name: spotify
+    root: ~/
+    panes:
+        - commands:
+          - spt
