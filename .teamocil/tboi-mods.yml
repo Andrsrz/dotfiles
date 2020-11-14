@@ -1,17 +1,32 @@
 name: tboi-mod
 windows:
-  - name: playground
-    root: ~/Documents/projects/lua/tboi-mods/playground
-    panes:
-        - commands:
-          - ll
-  - name: steam-folder
+  - name: steam-mods
     root: /games/Steam/steamapps/compatdata/250900/pfx/drive_c/users/steamuser/Documents
     panes:
         - commands:
           - cd My\ Games/Binding\ of\ Isaac\ Afterbirth+\ Mods
           - ll
-  - name: readme-preview
+  - name: steam-folder
+    root: /games/Steam/steamapps/common
+    panes:
+        - commands:
+          - cd The\ Binding\ of\ Isaac\ Rebirth
+          - ls
+  - name: playground
+    root: ~/Documents/projects/lua/tboi-mods/playground
+    panes:
+        - commands:
+          - ll
+  - name: biobak-ardc
+    root: ~/Documents/projects/lua/biobak-ardc
+    panes:
+        - commands:
+          - ll
+  - name: playground-readme
     root: ~/Documents/projects/lua/tboi-mods
     panes:
         - grip README.md 9340
+  - name: biobak-ardc-readme
+    root: ~/Documents/projects/lua/biobak-ardc
+    panes:
+        - grip README.md 5900
