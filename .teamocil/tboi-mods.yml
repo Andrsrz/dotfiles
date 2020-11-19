@@ -13,7 +13,7 @@ windows:
           - cd The\ Binding\ of\ Isaac\ Rebirth
           - ls
   - name: playground
-    root: ~/Documents/projects/lua/tboi-mods/playground
+    root: ~/Documents/projects/lua/tboi-mods
     panes:
         - commands:
           - ll
