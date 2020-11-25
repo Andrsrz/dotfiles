@@ -53,6 +53,7 @@
 (require 'multiple-cursors)
 (require 'magit)
 (require 'vue-mode)
+(require 'rust-mode)
 (require 'nvm)
 (require 'neotree)
 (require 'restclient)
