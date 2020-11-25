@@ -13,20 +13,20 @@ windows:
           - cd The\ Binding\ of\ Isaac\ Rebirth
           - ls
   - name: playground
-    root: ~/Documents/projects/lua/tboi-mods
+    root: ~/Documents/projects/games/tboi-mods
     panes:
         - commands:
           - ll
   - name: biobak-ardc
-    root: ~/Documents/projects/lua/biobak-ardc
+    root: ~/Documents/projects/games/biobak-ardc
     panes:
         - commands:
           - ll
   - name: playground-readme
-    root: ~/Documents/projects/lua/tboi-mods
+    root: ~/Documents/projects/games/tboi-mods
     panes:
         - grip README.md 9340
   - name: biobak-ardc-readme
-    root: ~/Documents/projects/lua/biobak-ardc
+    root: ~/Documents/projects/games/biobak-ardc
     panes:
         - grip README.md 5900
