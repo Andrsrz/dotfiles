@@ -1,0 +1,13 @@
+name: phaser
+windows:
+  - name: docs
+    root: ~/Documents/projects/games/phaser/phaser3-docs
+    panes:
+        - commands:
+          - cd docs/
+          - http-server -p 8088 -o index.html
+  - name: dev
+    root: ~/Documents/projects/games/phaser
+    panes:
+        - commands:
+          - ll
