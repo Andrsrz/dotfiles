@@ -1,5 +1,12 @@
 name: tboi-mod
 windows:
+  - name: docs
+    root: ~/Documents/projects/games/IsaacDocs
+    panes:
+        - commands:
+          - git pull upstream master
+          - sleep 1
+          - http-server -o index.html
   - name: steam-mods
     root: /games/Steam/steamapps/compatdata/250900/pfx/drive_c/users/steamuser/Documents
     panes:
