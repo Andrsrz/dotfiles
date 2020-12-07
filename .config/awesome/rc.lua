@@ -45,7 +45,12 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+-- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), "default")
+beautiful.init(theme_path)
+for s = 1, screen.count() do
+	gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+end
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -419,7 +424,27 @@ for i = 1, 9 do
                           end
                       end
                   end,
-                  {description = "toggle focused client on tag #" .. i, group = "tag"})
+                  {description = "toggle focused client on tag #" .. i, group = "tag"}),
+		-- Volume Keys
+   		awful.key({}, "XF86AudioLowerVolume", function ()
+     		awful.util.spawn("amixer -q -D pulse sset Master 5%-", false)
+   		end),
+   		awful.key({}, "XF86AudioRaiseVolume", function ()
+     		awful.util.spawn("amixer -q -D pulse sset Master 5%+", false)
+   		end),
+   		awful.key({}, "XF86AudioMute", function ()
+     		awful.util.spawn("amixer -D pulse set Master 1+ toggle", false)
+   		end),
+   		-- Media Keys
+   		awful.key({}, "XF86AudioPlay", function()
+     		awful.util.spawn("playerctl play-pause", false)
+   		end),
+   		awful.key({}, "XF86AudioNext", function()
+     		awful.util.spawn("playerctl next", false)
+   		end),
+   		awful.key({}, "XF86AudioPrev", function()
+     		awful.util.spawn("playerctl previous", false)
+   		end)
     )
 end
 
@@ -490,7 +515,7 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
+      }, properties = { titlebars_enabled = false }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
