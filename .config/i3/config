@@ -243,3 +243,8 @@ new_window 1pixel
 
 # Execute xbindkeys (backligh laptop)
 exec_always xbindkeys
+
+# Change keyboard layout
+bindsym $mod+Control+U exec setxkbmap us
+bindsym $mod+Control+L exec setxkbmap latam
+bindsym $mod+Control+J exec setxkbmap jp
