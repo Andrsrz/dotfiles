@@ -143,7 +143,6 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # open to specific workspace
 # floating windows
 for_window [class="Anki" instance="anki"] floating enable
-for_window [class="Tyra" instance="tyra"] floating enable
 for_window [class="MEGAsync" instance="megasync"] floating enable
 for_window [class="Gnome-calculator" instance="gnome-calculator"] floating enable
 for_window [class="Wine" instance="battle.net.exe"] floating enable
