@@ -24,13 +24,9 @@
 ;(package! some-package)
 (package! magit)
 (package! multiple-cursors)
-(package! neotree)
 (package! restclient)
 (package! nvm)
 (package! vue-mode)
-(package! gdscript-mode
-	:recipe (:host github
-		:repo "GDQuest/emacs-gdscript-mode"))
 (package! rust-mode)
 ;; If you want to use latest version
 ;; (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)

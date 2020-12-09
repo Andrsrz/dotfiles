@@ -18,7 +18,7 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "Mononoki Nerd Font Mono" :size 15))
+(setq doom-font (font-spec :family "Mononoki Nerd Font Mono" :size 13))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -50,14 +50,14 @@
 ;; they are implemented.
 
 ; START CONFIGS
-(require 'multiple-cursors)
-(require 'magit)
-(require 'vue-mode)
-(require 'rust-mode)
-(require 'nvm)
-(require 'neotree)
-(require 'restclient)
-(require 'gdscript-mode)
+;(require 'multiple-cursors)
+;(require 'magit)
+;(require 'vue-mode)
+;(require 'rust-mode)
+;(require 'nvm)
+;(require 'neotree)
+;(require 'restclient)
+;(require 'gdscript-mode)
 ;; When you have an active region that spans multiple lines, the following will
 ;; add a cursor to each line:
 (global-set-key (kbd "C-S-c RET") 'mc/edit-lines)
@@ -107,7 +107,6 @@
 (add-hook 'org-mode-hook 'enable-tabs)
 (add-hook 'lisp-mode-hook 'enable-tabs)
 (add-hook 'emacs-lisp-mode-hook 'enable-tabs)
-(add-hook 'gdscript-mode 'enable-tabs)
 
 ;; Language-Specific Tweaks
 (setq-default python-indent-offset custom-tab-width)  ;; Python
