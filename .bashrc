@@ -19,6 +19,8 @@ export PATH=/usr/include:"$PATH"
 export PATH=/usr/sbin:"$PATH"
 # Path for user scripts
 export PATH=~/bin:"$PATH"
+# Doom Emacs
+export PATH=~/.doomemacs/.emacs.d/bin:"$PATH"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
