@@ -8,6 +8,11 @@ windows:
           - http-server -p 8088 -o index.html
   - name: dev
     root: ~/Documents/projects/games/phaser
+    layout: main-vertical
     panes:
+        - commands:
+          - ll
+        - commands:
+          - ll
         - commands:
           - ll
