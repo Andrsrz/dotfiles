@@ -3,16 +3,15 @@ anbox-image-gapps
 anbox-modules-dkms-git
 android-studio
 bashdb
+cadmus-bin
 cpu-x
 ddd
 drawio-desktop
 godot
 i3-agenda-git
-itch-bin
 legendary
 libselinux
 lyrebird
-megasync
 minecraft-launcher
 nerd-fonts-complete
 nvm
@@ -21,7 +20,7 @@ piper-git
 playerctl-git
 polybar
 protontricks
-python-grip
+python-grip-git
 raylib-cpp-git
 rbenv
 ruby-build
@@ -38,8 +37,8 @@ tmux-bash-completion
 tor-browser
 ttf-monapo
 viewnior-git
-xorg-luit
 xorg-server-xdmx
+xorg-server-xwayland
 yay
 zeal
 zoom

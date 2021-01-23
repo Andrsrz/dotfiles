@@ -23,6 +23,7 @@ cowsay
 cronie
 cryptsetup
 cups
+deno
 device-mapper
 dhcpcd
 dictd
@@ -144,6 +145,7 @@ linux-headers
 llvm
 lmms
 logrotate
+luit
 lutris
 lvm2
 lxappearance
@@ -178,6 +180,7 @@ patch
 pavucontrol
 pciutils
 pdftk
+pencil2d
 perl
 php-apache
 phppgadmin
@@ -194,7 +197,6 @@ raylib
 reiserfsprogs
 rofi
 rtorrent
-rust
 rygel
 s-nail
 samba
@@ -253,7 +255,6 @@ xorg-server-devel
 xorg-server-xephyr
 xorg-server-xnest
 xorg-server-xvfb
-xorg-server-xwayland
 xorg-sessreg
 xorg-setxkbmap
 xorg-smproxy
@@ -289,7 +290,6 @@ xorg-xwininfo
 xorg-xwud
 yarn
 yelp
-youtube-dl
 zathura
 zathura-cb
 zathura-pdf-mupdf
