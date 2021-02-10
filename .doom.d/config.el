@@ -54,10 +54,6 @@
 (require 'magit)
 (require 'vue-mode)
 (require 'rust-mode)
-;(require 'nvm)
-;(require 'neotree)
-;(require 'restclient)
-;(require 'gdscript-mode)
 ;; When you have an active region that spans multiple lines, the following will
 ;; add a cursor to each line:
 (global-set-key (kbd "C-S-c RET") 'mc/edit-lines)
@@ -114,14 +110,9 @@
 (setq-default web-mode-css-indent-offset custom-tab-width-for-web)
 (setq-default web-mode-script-padding custom-tab-width-for-web)
 (setq-default css-indent-offset custom-tab-width-for-web) ;; CSS
-(setq-default js2-indent-hook custom-tab-width-for-web) ;; JavaScript
 
 ;; Making electric-indent behave sanely
 (setq-default electric-indent-inhibit t)
-;; make return key also do indent, globally
-(electric-indent-mode 1)
-
-; END TABS CONFIG
 
 ;; Make the backspace properly erase the tab instead of
 ;; removing 1 space at a time.
@@ -135,6 +126,7 @@
 (setq whitespace-display-mappings
 	'((tab-mark 9 [124 9] [92 9]))) ; 124 is the ascii ID for '\|'
 (global-whitespace-mode) ; Enable whitespace mode everywhere
+; END TABS CONFIG
 
 ;; Vue Config
 (add-to-list 'auto-mode-alist '("\\.vue\\'" . vue-mode))

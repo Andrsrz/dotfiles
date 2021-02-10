@@ -24,7 +24,6 @@
 ;(package! some-package)
 (package! magit)
 (package! multiple-cursors)
-(package! restclient)
 (package! nvm)
 (package! vue-mode)
 (package! rust-mode)
