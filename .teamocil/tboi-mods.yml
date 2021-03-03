@@ -13,11 +13,11 @@ windows:
         - commands:
           - cd My\ Games/Binding\ of\ Isaac\ Afterbirth+\ Mods
           - ll
-  - name: steam-folder
+  - name: resources
     root: /games/Steam/steamapps/common
     panes:
         - commands:
-          - cd The\ Binding\ of\ Isaac\ Rebirth
+          - cd The\ Binding\ of\ Isaac\ Rebirth/resources
           - ls
   - name: playground
     root: ~/Documents/projects/games/tboi-mods
