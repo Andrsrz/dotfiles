@@ -6,7 +6,7 @@ windows:
         - commands:
           - git pull upstream master
           - sleep 1
-          - http-server -o index.html
+          - python3 -m mkdocs serve
   - name: steam-mods
     root: /games/Steam/steamapps/compatdata/250900/pfx/drive_c/users/steamuser/Documents
     panes:
