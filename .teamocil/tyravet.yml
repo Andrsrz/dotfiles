@@ -1,40 +1,40 @@
-name: tyra-web
+name: tyravet
 windows:
   - name: tests
-    root: ~/Documents/projects/web
+    root: ~/Documents/projects/web/tyravet-projects
     layout: even-horizontal
     panes:
         - commands:
-          - cd tyra-web/
+          - cd tyravet/
           - npm run test:unit
         - commands:
-          - cd tyra-web-api/
+          - cd tyravet-api/
           - npm run test:unit
   - name: mongodb
-    root: ~/Documents/projects/web/tyra-web-api
+    root: ~/Documents/projects/web/tyravet-projects/tyravet-api
     panes:
         - commands:
           - sudo docker start mongodb
           - sudo docker exec -it mongodb bash
   - name: api
-    root: ~/Documents/projects/web/tyra-web-api
+    root: ~/Documents/projects/web/tyravet-projects/tyravet-api
     panes:
         - commands:
           - sleep 3
           - ll
           - npm run dev:start
   - name: app
-    root: ~/Documents/projects/web/tyra-web
+    root: ~/Documents/projects/web/tyravet-projects/tyravet
     panes:
         - commands:
           - sleep 6
           - ll
           - npm run serve
-  - name: readme-preview-tw
-    root: ~/Documents/projects/web/tyra-web
+  - name: readme-preview-tv
+    root: ~/Documents/projects/web/tyravet-projects/tyravet
     panes:
         - grip README.md 9340
-  - name: readme-preview-twa
-    root: ~/Documents/projects/web/tyra-web-api
+  - name: readme-preview-tva
+    root: ~/Documents/projects/web/tyravet-projects/tyravet-api
     panes:
         - grip README.md 5900
